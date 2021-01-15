@@ -49,7 +49,7 @@ start:     mov     rf,0e020h           ; need to check signature
            lda     rf
            lbz     go
 bad:       sep     scall               ; Visual/02 not present, display error
-           dw      f_inmsg
+           dw      o_inmsg
            db      'Visual/02 is not present in ROM.  Aborting.',10,13,0
            lbr     o_wrmboot
 go:        ldn     ra                  ; see if argument provided
